@@ -275,3 +275,7 @@ dependencies {
     debugImplementation(composeBom)
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
+
+tasks.named("preBuild") {
+    dependsOn(rootProject.tasks.named("startApi"))
+}
